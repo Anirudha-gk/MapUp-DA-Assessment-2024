@@ -171,7 +171,7 @@ def calculate_time_based_toll_rates(df):
                     }
                     # Apply the weekday discount to all vehicles
                     for vehicle in ['moto', 'car', 'rv', 'bus', 'truck']:
-                        if vehicle in row: 
+                        if vehicle in row:  # Ensure the column exists in the row
                             discounted_row[vehicle] = distance * row[vehicle] * discount
                     rows.append(discounted_row)
     
